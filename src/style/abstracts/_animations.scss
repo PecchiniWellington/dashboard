@@ -1,0 +1,68 @@
+//animations
+@keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.-fadeOutLeft {
+  animation-name: fadeOutLeft;
+  animation-duration: 0.8s;
+}
+
+@keyframes zoomOutLeft {
+  40% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(42px, 0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.1) translate3d(-2000px, 0, 0);
+  }
+}
+
+.-zoomOutLeft {
+  animation-name: zoomOutLeft;
+  animation-duration: 0.8s;
+  transform-origin: left center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.-fadeIn {
+  animation-name: fadeIn;
+}
+
+@keyframes glow {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+
+.-glow {
+  animation-name: glow;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-duration: 0.9s;
+}
+
+/* TRANSITIONS */
+
+$transitionO2: all 0.2 ease;
+$transitionO3: all 0.3 ease;
+$transitionO4: all 0.4 ease;
+$transitionO5: all 0.5 ease;

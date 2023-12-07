@@ -1,0 +1,124 @@
+@import "/src/style/main.scss";
+.dashboard {
+  &__sideBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px 14px;
+    background-color: $uiColor4;
+
+    li {
+      height: 50px;
+      margin-top: 10px;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      border: 1px solid red;
+
+      .icon {
+        font-size: 20px;
+        min-width: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      a {
+        color: $textColorBlack;
+        text-decoration: none;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        border-radius: 6px;
+
+        .icon {
+          font-size: 20px;
+          min-width: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        &:hover {
+          background-color: $primaryColor;
+          width: 100%;
+
+          .icon,
+          .text {
+            color: $textColorBlack;
+          }
+        }
+      }
+    }
+    .image {
+      min-width: 60px;
+      display: flex;
+      align-items: center;
+    }
+
+    .text {
+      font-size: 16px;
+      font-weight: 500px;
+    }
+
+    header {
+      position: relative;
+      .toggle {
+        position: absolute;
+        top: 50%;
+        right: -25px;
+        height: 25px;
+        width: 25px;
+        transform: translateY(-50%);
+        background-color: $primaryColor;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        color: white;
+        cursor: pointer;
+
+        &Icon {
+          font-size: 12px;
+        }
+      }
+      .imageText {
+        display: flex;
+        align-items: center;
+
+        .header-text {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .name {
+          font-weight: 600;
+        }
+        .profession {
+          margin-top: -2px;
+        }
+        img {
+          width: 40px;
+          border-radius: 6px;
+        }
+      }
+    }
+
+    .search-box {
+      background-color: $uiColor3;
+
+      input {
+        height: 100%;
+        width: 100%;
+        outline: none;
+        border: none;
+        border-radius: 6px;
+        background-color: $uiColor3;
+
+        //transition:cubic-bezier(1, 0, 0, 1)
+      }
+    }
+  }
+}

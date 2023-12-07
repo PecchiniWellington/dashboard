@@ -1,0 +1,56 @@
+/* ==========================================================================
+    GLOBAL RESETS
+    ========================================================================== */
+
+html {
+  margin: 0 !important;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+body {
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  color: $baseColor;
+  margin: 0;
+}
+.-bold {
+  font-weight: 600;
+}
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+}
+a.-routerLink {
+  text-decoration: none;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+// ─── Hide Input Number Arrows ────────────────────────────────────────────────
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  margin: 0;
+  appearance: none;
+}
+
+/* Firefox */
+
+input[type="number"] {
+  appearance: textfield;
+}
+input::-webkit-inner-spin-button {
+  margin: 0;
+  appearance: none;
+}

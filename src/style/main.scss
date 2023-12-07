@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+// stylelint-disable import-notation
+
+/* ==========================================================================
+Global Abstracts SCSS
+========================================================================== */
+@import "./abstracts/all.scss";
+
+/* ==========================================================================
+Components Abstracts SCSS
+========================================================================== */
+@import "./components/all.scss";
+
+body {
+  background-color: #efefef;
+}
+
+#root {
+  overflow: hidden;
+}

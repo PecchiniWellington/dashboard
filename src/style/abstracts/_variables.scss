@@ -1,0 +1,48 @@
+/* global _variables */
+
+/* gradients */
+$bg-gradient-1: linear-gradient(46.62deg, #7367f0 0%, #9e95f5 93.64%);
+$bg-gradient-2: linear-gradient(0deg, #0b4583, #0b4583), #393470;
+$bg-gradient-3: radial-gradient(
+  103.14% 45.48% at 59.83% 50%,
+  rgb(255 255 255 / 0%) 47%,
+  rgb(255 255 255 / 82%) 100%
+);
+
+/* shadows */
+$box-shadow-1: 0 0 6px rgb(115 103 240 / 60%);
+$box-shadow-2: 0 0 4px rgb(0 0 0 / 25%);
+$box-shadow-3: 0 0 4px #36b7ff;
+$box-shadow-4: 0 0 51px rgb(0 0 0 / 11%);
+$box-shadow-5: 11px 0 8px -5px rgb(0 0 0 / 11%);
+$box-shadow-6: 0 7px 26px 18px rgb(0 0 0 / 7%);
+
+/* media queries */
+$desktop-layout: 1041px;
+$desktop-medium-layout: 1270px;
+$desktop-large-layout: 1420px;
+$desktop-x-large-layout: 1640px;
+$tablet-layout: 821px;
+$tablet-small-layout: 673px;
+
+/* z-index */
+$z-index-base: 1;
+$z-index-medium: 10;
+$z-index-top: 100;
+$z-index-main: 9999999;
+
+$x-small-font: 0.875rem;
+$small-font: 1rem;
+$x-medium-font: 1.3rem;
+$medium-font: 1.5rem;
+$x-big-font: 2rem;
+$big-font: 2.5rem;
+$large-font: 4rem;
+
+/* BORDER RADIUS */
+
+$border-small: 4px;
+$border-regular: 8px;
+$border-big: 16px;
+
+$padding-sections: 80px;
