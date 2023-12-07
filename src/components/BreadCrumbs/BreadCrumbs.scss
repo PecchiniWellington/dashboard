@@ -1,0 +1,39 @@
+@import "../../scss/main.scss";
+
+.vot {
+  &__breadCrumbs {
+    border-top: 1px solid black;
+    padding-top: 20px;
+    margin-top: 5px;
+
+    & > * {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .crumb {
+      &:after {
+        color: $uiColor2;
+        content: "/";
+        margin-left: 10px;
+      }
+      &:last-child:after {
+        display: none;
+      }
+      &:last-child {
+        a {
+          color: $uiColor1 !important;
+        }
+      }
+      a {
+        text-decoration: none;
+        font-weight: 100;
+        color: $uiColor4;
+
+        &:hover {
+          color: $uiColor3;
+        }
+      }
+    }
+  }
+}

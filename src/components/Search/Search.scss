@@ -1,0 +1,32 @@
+@import "../../scss/main.scss";
+
+.vot {
+  &__search {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $primaryColor;
+    border: 1px solid black;
+    border-radius: 11px;
+    max-width: 650px;
+
+    &Title {
+      padding: 20px;
+    }
+
+    &Form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: start;
+      width: 100%;
+      box-sizing: border-box;
+      position: relative;
+    }
+  }
+}

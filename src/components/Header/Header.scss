@@ -1,0 +1,29 @@
+@import "../../scss/main.scss";
+
+.vot {
+  &__header {
+    border-bottom: 1px solid black;
+    padding: 30px;
+    background-color: $primaryColor;
+    width: 100%;
+    position: fixed;
+    display: block;
+    left: 0;
+    z-index: 2;
+    top: 0;
+    font-size: 16px;
+
+    &Content {
+      max-width: 80%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .vorticeDash {
+      margin-top: 5px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

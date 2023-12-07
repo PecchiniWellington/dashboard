@@ -1,0 +1,41 @@
+@import "../../scss/main.scss";
+
+.accordion {
+  border: 1px solid;
+  width: 100%;
+  color: $baseColor;
+  background-color: $secondaryColor;
+  border: none;
+  border-radius: 4px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 1rem;
+
+    &Arrow {
+      font-size: $medium-font;
+      font-weight: 800;
+      margin-left: 20px;
+    }
+  }
+  .open {
+    display: block;
+    padding: 20px 20px;
+    font-size: $small-font;
+    transition: all 0.35s;
+  }
+
+  &__content {
+    > p {
+      text-align: left;
+      text-align: justify;
+    }
+  }
+  .closed {
+    display: none;
+    transition: all 0.35s;
+  }
+}

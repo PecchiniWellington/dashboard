@@ -1,0 +1,13 @@
+@import "../../scss/main.scss";
+
+.vot {
+  &__customTable {
+    border: 1px solid black;
+    background-color: $baseColor;
+    border-spacing: 0px;
+    &Container {
+      border-collapse: collapse;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@import "../../../scss/main.scss";
+
+.vot {
+  &__tableFooter {
+    background-color: $primaryColor;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+    padding: 20px;
+    font-size: 1rem;
+  }
+}

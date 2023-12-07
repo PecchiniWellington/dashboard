@@ -1,0 +1,39 @@
+@import "../../scss/main.scss";
+
+.vot {
+  &__loginForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 640px;
+    &Content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+
+      &-title {
+        width: 100%;
+        text-align: center;
+      }
+
+      &-field {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+
+        .customInput {
+          width: 100%;
+        }
+      }
+
+      &-footer {
+        width: 100%;
+        display: flex;
+        justify-content: left;
+      }
+    }
+  }
+}

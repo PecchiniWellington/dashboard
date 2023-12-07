@@ -1,84 +1,93 @@
-import {
-  faChevronRight,
-  faHouse,
-  faMoon,
-  faSearch,
-  faSignOut,
-  faSun,
-} from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 import "./SideBar.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface ISideBar {}
 
 function SideBar({}: ISideBar) {
+  const [openMenu, setOpenMenu] = useState("bx-menu");
+  const [open, setOpen] = useState(false);
+  const sidebar = document.querySelector(".sidebar");
+  const closeBtn = document.querySelector("#btn");
+  const searchBtn = document.querySelector(".bx-search");
+  const toggleButton = () => {
+    setOpen(!open);
+    //setOpenMenu(openMenu === "bx-menu" ? "bx-menu-alt-right" : "bx-menu");
+  };
+
   return (
-    <nav className="dashboard__sideBar">
-      <header>
-        <div className="imageText">
-          <span className="image">
-            <img src="logo.png" alt="logo" />
-          </span>
-          <div className="text header-text">
-            <span className="name">CodingLab</span>
-            <span className="profession">Web Developer</span>
-          </div>
-        </div>
-
-        <div className="toggle">
-          <FontAwesomeIcon
-            className="toggleIcon"
-            icon={faChevronRight}
-          ></FontAwesomeIcon>
-        </div>
-      </header>
-
-      <div className="menu-bar">
-        <div className="menu">
-          <li className="search-box">
-            <a href="#">
-              <FontAwesomeIcon
-                className="icon"
-                icon={faSearch}
-              ></FontAwesomeIcon>
-              <div className="icon">
-                <input type="search" placeholder="Search..." />
-              </div>
-            </a>
-          </li>
-          <ul className="menu-links">
-            <li className="nav link">
-              <a href="#">
-                <div className="toggleIcon icon">
-                  <FontAwesomeIcon icon={faHouse}></FontAwesomeIcon>
-                </div>
-                <span className="text nav-text">Dashboard</span>
-              </a>
-            </li>
-          </ul>
-        </div>
+    <div className={`sidebar ${open ? "open" : ""}`}>
+      <div className="logo_details">
+        <i className="bx bxl-audible icon"></i>
+        <div className="logo_name">Code Effect</div>
+        <i className="bx bx-menu" id="btn" onClick={toggleButton}></i>
       </div>
-
-      <div className="bottom-content">
+      <ul className="nav-list">
+        <li>
+          <i className="bx bx-search"></i>
+          <input type="text" placeholder="Search..." />
+          <span className="tooltip">Search</span>
+        </li>
         <li>
           <a href="#">
-            <FontAwesomeIcon icon={faSignOut} />
-            <span className="text nav-text">Logout</span>
+            <i className="bx bx-grid-alt"></i>
+            <span className="link_name">Dashboard</span>
           </a>
+          <span className="tooltip">Dashboard</span>
         </li>
-
-        <li className="mode">
-          <div className="moon-sun">
-            <FontAwesomeIcon className="icon" icon={faMoon} />
-            <FontAwesomeIcon className="icon" icon={faSun} />
-          </div>
-          <span className="text">Dark Mode</span>
-          <div className="toggle-switch">
-            <span className="switch"></span>
-          </div>
+        <li>
+          <a href="#">
+            <i className="bx bx-user"></i>
+            <span className="link_name">User</span>
+          </a>
+          <span className="tooltip">User</span>
         </li>
-      </div>
-    </nav>
+        <li>
+          <a href="#">
+            <i className="bx bx-chat"></i>
+            <span className="link_name">Message</span>
+          </a>
+          <span className="tooltip">Message</span>
+        </li>
+        <li>
+          <a href="#">
+            <i className="bx bx-pie-chart-alt-2"></i>
+            <span className="link_name">Analytics</span>
+          </a>
+          <span className="tooltip">Analytics</span>
+        </li>
+        <li>
+          <a href="#">
+            <i className="bx bx-folder"></i>
+            <span className="link_name">File Manger</span>
+          </a>
+          <span className="tooltip">File Manger</span>
+        </li>
+        <li>
+          <a href="#">
+            <i className="bx bx-cart-alt"></i>
+            <span className="link_name">Order</span>
+          </a>
+          <span className="tooltip">Order</span>
+        </li>
+        <li>
+          <a href="#">
+            <i className="bx bx-cog"></i>
+            <span className="link_name">Settings</span>
+          </a>
+          <span className="tooltip">Settings</span>
+        </li>
+        <li className="profile">
+          <div className="profile_details">
+            <img src="profile.jpeg" alt="profile image" />
+            <div className="profile_content">
+              <div className="name">Anna Jhon</div>
+              <div className="designation">Admin</div>
+            </div>
+          </div>
+          <i className="bx bx-log-out" id="log_out"></i>
+        </li>
+      </ul>
+    </div>
   );
 }
 

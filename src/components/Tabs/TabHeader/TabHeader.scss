@@ -1,0 +1,9 @@
+.vot {
+  &__tabHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    display: row;
+    gap: 20px;
+  }
+}

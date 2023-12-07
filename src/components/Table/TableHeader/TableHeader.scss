@@ -1,0 +1,24 @@
+@import "../../../scss/main.scss";
+
+.vot {
+  &__tableHeader {
+    background-color: $primaryColor;
+    color: $uiColor2;
+    width: 100%;
+    &Row {
+      padding: 20px;
+
+      > th {
+        > div {
+          text-align: left;
+          &:before {
+            padding-right: 20px;
+            content: "";
+            border-left: 1px solid $baseColor;
+          }
+        }
+        padding: 12px;
+      }
+    }
+  }
+}

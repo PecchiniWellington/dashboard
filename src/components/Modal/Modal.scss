@@ -1,0 +1,41 @@
+.vot {
+  &__modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    color: #333;
+    width: fit-content;
+    height: fit-content;
+    padding: 30px;
+    z-index: 1000;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &Header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      &Title {
+        font-size: 24px;
+      }
+
+      &Button {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+  }
+}
