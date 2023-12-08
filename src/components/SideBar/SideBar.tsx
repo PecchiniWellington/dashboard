@@ -1,17 +1,14 @@
 import { useState } from "react";
 import "./SideBar.scss";
+import { IMenu, sideBarConfig } from "./SideBarConfig";
+import SideBarLink from "./SideBarLink/SideBarLink";
 
 interface ISideBar {}
 
 function SideBar({}: ISideBar) {
-  const [openMenu, setOpenMenu] = useState("bx-menu");
   const [open, setOpen] = useState(false);
-  const sidebar = document.querySelector(".sidebar");
-  const closeBtn = document.querySelector("#btn");
-  const searchBtn = document.querySelector(".bx-search");
   const toggleButton = () => {
     setOpen(!open);
-    //setOpenMenu(openMenu === "bx-menu" ? "bx-menu-alt-right" : "bx-menu");
   };
 
   return (
@@ -19,7 +16,7 @@ function SideBar({}: ISideBar) {
       <div className="logo_details">
         <i className="bx bxl-audible icon"></i>
         <div className="logo_name">Code Effect</div>
-        <i className="bx bx-menu" id="btn" onClick={toggleButton}></i>
+        <i className="bx bx-menu btn" onClick={toggleButton}></i>
       </div>
       <ul className="nav-list">
         <li>
@@ -27,60 +24,15 @@ function SideBar({}: ISideBar) {
           <input type="text" placeholder="Search..." />
           <span className="tooltip">Search</span>
         </li>
-        <li>
-          <a href="#">
-            <i className="bx bx-grid-alt"></i>
-            <span className="link_name">Dashboard</span>
-          </a>
-          <span className="tooltip">Dashboard</span>
-        </li>
-        <li>
-          <a href="#">
-            <i className="bx bx-user"></i>
-            <span className="link_name">User</span>
-          </a>
-          <span className="tooltip">User</span>
-        </li>
-        <li>
-          <a href="#">
-            <i className="bx bx-chat"></i>
-            <span className="link_name">Message</span>
-          </a>
-          <span className="tooltip">Message</span>
-        </li>
-        <li>
-          <a href="#">
-            <i className="bx bx-pie-chart-alt-2"></i>
-            <span className="link_name">Analytics</span>
-          </a>
-          <span className="tooltip">Analytics</span>
-        </li>
-        <li>
-          <a href="#">
-            <i className="bx bx-folder"></i>
-            <span className="link_name">File Manger</span>
-          </a>
-          <span className="tooltip">File Manger</span>
-        </li>
-        <li>
-          <a href="#">
-            <i className="bx bx-cart-alt"></i>
-            <span className="link_name">Order</span>
-          </a>
-          <span className="tooltip">Order</span>
-        </li>
-        <li>
-          <a href="#">
-            <i className="bx bx-cog"></i>
-            <span className="link_name">Settings</span>
-          </a>
-          <span className="tooltip">Settings</span>
-        </li>
+
+        {sideBarConfig.map((menu: IMenu) => (
+          <SideBarLink menu={menu} />
+        ))}
         <li className="profile">
           <div className="profile_details">
             <img src="profile.jpeg" alt="profile image" />
             <div className="profile_content">
-              <div className="name">Anna Jhon</div>
+              <div className="name">Wellintone</div>
               <div className="designation">Admin</div>
             </div>
           </div>
