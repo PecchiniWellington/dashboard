@@ -1,12 +1,16 @@
+import { BrowserRouter } from "react-router-dom";
 import "./App.scss";
-import SideBar from "./components/SideBar/SideBar";
-import NavBar from "./components/NavBar/NavBar";
 import DashboardLayout from "./layouts/DashboardLayout/DashboardLayout";
+import DashboardContextProvider from "./context/dashboardContext";
 
 function App() {
   return (
     <>
-      <DashboardLayout />
+      <BrowserRouter>
+        <DashboardContextProvider>
+          <DashboardLayout />
+        </DashboardContextProvider>
+      </BrowserRouter>
     </>
   );
 }

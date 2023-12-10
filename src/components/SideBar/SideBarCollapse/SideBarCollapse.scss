@@ -1,0 +1,155 @@
+@import "/src/style//main.scss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.collapse {
+  grid-template-columns: 20px max-content 1fr;
+  text-decoration: none;
+  position: relative;
+
+  &Link {
+    text-decoration: none;
+  }
+
+  &__sublink {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background-color: $textColorBlack;
+
+    position: relative;
+    transition: all 0.5s ease;
+    z-index: 12;
+
+    &:hover {
+      background-color: $primaryColor;
+      cursor: pointer;
+    }
+
+    .activated {
+      padding: 7px 50px !important;
+      background-color: $primaryColor !important;
+      color: $baseColor !important;
+    }
+    .nav_linkTest {
+      text-decoration: none;
+      color: $baseColor;
+      width: 100%;
+      padding: 7px 50px;
+    }
+  }
+
+  .collapseLink {
+    .collapseShow {
+      height: 0%;
+    }
+  }
+
+  .activated {
+    text-decoration: none;
+    color: $primaryColor;
+    width: 100%;
+    display: flex;
+    background-color: $baseColor;
+    border-radius: 6px;
+
+    .collapseHeader {
+      color: white;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      i {
+        height: 35px;
+        line-height: 35px;
+        font-size: 18px;
+        border-radius: 5px;
+      }
+
+      .link_name {
+        display: block;
+      }
+    }
+
+    .collapseHeaderClose {
+      width: 100%;
+      margin: 6px 0;
+
+      .link_name {
+        display: none;
+      }
+    }
+    .link_name,
+    i {
+      transition: all 0.5s ease;
+      color: $primaryColor;
+    }
+  }
+
+  &Header {
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    i {
+      height: 35px;
+      line-height: 35px;
+      font-size: 18px;
+      border-radius: 5px;
+    }
+
+    &Close {
+      margin: 6px 0;
+      .link_name {
+        opacity: 0;
+      }
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+      color: $primaryColor;
+    }
+
+    &:hover {
+      .link_name,
+      i {
+        transition: all 0.5s ease;
+        color: $primaryColor;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform: scaleX(0);
+      background-color: var(--color-white);
+      border-radius: 5px;
+      transition: transform 0.3s ease-in-out;
+      transform-origin: left;
+      z-index: -2;
+    }
+
+    .collapse_icon {
+      margin-left: auto;
+    }
+  }
+
+  &Show {
+    height: calc(100% + 70px);
+    transition: all 0.5s ease;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+  }
+  &Hide {
+    height: 0%;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+  }
+}
