@@ -15,19 +15,34 @@ function SideBarCollapse({ open, menu }: ISideBarCollapse) {
   const location = useLocation();
 
   const { dispatch } = useContext(DashboardContext);
+
+  const onOpenCollapse = () => {
+    setOpenCollapse(!openCollapse);
+    dispatch({ type: "UPDATE_TITLE", payload: menu.label });
+    localStorage.setItem("title", JSON.stringify(menu.label));
+  };
+
+  const cartFromLocalStorage = JSON.parse(localStorage.getItem("title")) || [];
   useEffect(() => {
     if (location.pathname.includes(menu.linkTo)) {
       setIsCurrent(location.pathname.includes(menu.linkTo));
+      console.log(cartFromLocalStorage);
+      dispatch({ type: "UPDATE_TITLE", payload: cartFromLocalStorage });
     } else {
       setOpenCollapse(false);
-      dispatch({ type: "UPDATE_TITLE", payload: menu.label });
     }
-  }, [dispatch, location.pathname, menu.label, menu.linkTo]);
+  }, [
+    cartFromLocalStorage,
+    dispatch,
+    location.pathname,
+    menu.label,
+    menu.linkTo,
+  ]);
   return (
     <div>
       <div className="collapse">
         <NavLink
-          onClick={() => setOpenCollapse(!openCollapse)}
+          onClick={onOpenCollapse}
           to={menu.linkTo}
           className={({ isActive }) =>
             isActive ? "activated" : "collapseLink"

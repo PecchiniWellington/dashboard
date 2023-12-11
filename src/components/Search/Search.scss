@@ -1,4 +1,4 @@
-@import "../../scss/main.scss";
+@import "/src/style/main.scss";
 
 .vot {
   &__search {
@@ -12,7 +12,7 @@
     justify-content: center;
     background-color: $primaryColor;
     border: 1px solid black;
-    border-radius: 11px;
+    border-radius: $border-regular;
     max-width: 650px;
 
     &Title {

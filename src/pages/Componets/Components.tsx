@@ -1,12 +1,16 @@
-import "./Card.scss";
+import { Outlet } from "react-router-dom";
+import "./Components.scss";
 
-interface ICard {
-  children: string | JSX.Element | JSX.Element[];
+interface IComponents {
   customClass?: string;
 }
 
-function Card({ children, customClass }: ICard) {
-  return <div className={`vot__card ${customClass}`}>{children}</div>;
+function Components({ customClass }: IComponents) {
+  return (
+    <div className={`components ${customClass}`}>
+      <Outlet />
+    </div>
+  );
 }
 
-export default Card;
+export default Components;

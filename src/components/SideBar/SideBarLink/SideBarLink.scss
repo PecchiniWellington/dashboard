@@ -8,7 +8,7 @@ li {
 
   .activated {
     background-color: $baseColor;
-    border-radius: 5px;
+    border-radius: $border-small;
     list-style: none;
     text-decoration: none;
     width: 100%;
@@ -36,7 +36,7 @@ li {
     height: 35px;
     line-height: 35px;
     font-size: 18px;
-    border-radius: 5px;
+    border-radius: $border-small;
   }
 
   .sideBarLink {
@@ -70,7 +70,7 @@ li {
       height: 100%;
       transform: scaleX(0);
       background-color: var(--color-white);
-      border-radius: 5px;
+      border-radius: $border-small;
       transition: transform 0.3s ease-in-out;
       transform-origin: left;
       z-index: -2;

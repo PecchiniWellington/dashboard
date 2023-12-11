@@ -14,7 +14,7 @@
       background-color: $baseColor;
       color: $uiColor2;
       padding: 10px;
-      border-radius: 5px;
+      border-radius: $border-small;
       z-index: 9999;
     }
   }

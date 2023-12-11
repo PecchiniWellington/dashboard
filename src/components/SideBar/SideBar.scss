@@ -69,7 +69,7 @@ body {
     transition: all 0.5s ease;
     .activated {
       background-color: $baseColor;
-      border-radius: 5px;
+      border-radius: $border-small;
       padding: 7px 50px;
 
       i,
@@ -156,7 +156,7 @@ body {
       height: 35px;
       line-height: 35px;
       font-size: 18px;
-      border-radius: 5px;
+      border-radius: $border-small;
     }
   }
 
@@ -197,7 +197,7 @@ body {
       width: 100%;
       height: 60px;
       line-height: 60px;
-      border-radius: 5px;
+      border-radius: $border-small;
       cursor: pointer;
       transition: all 0.5s ease;
     }
@@ -213,7 +213,7 @@ body {
     padding: 6px 14px;
     font-size: 15px;
     font-weight: 400;
-    border-radius: 5px;
+    border-radius: $border-small;
     white-space: nowrap;
     opacity: 0;
     pointer-events: none;
@@ -227,7 +227,7 @@ body {
     height: 35px;
     width: 35px;
     border: none;
-    border-radius: 5px;
+    border-radius: $border-small;
     background-color: $primaryColor;
     transition: all 0.5s ease;
 
@@ -274,7 +274,7 @@ body {
 
     .activated {
       background-color: $baseColor;
-      border-radius: 5px;
+      border-radius: $border-small;
       list-style: none;
       text-decoration: none;
 
@@ -330,7 +330,7 @@ body {
           height: 100%;
           transform: scaleX(0);
           background-color: var(--color-white);
-          border-radius: 5px;
+          border-radius: $border-small;
           transition: transform 0.3s ease-in-out;
           transform-origin: left;
           z-index: -2;

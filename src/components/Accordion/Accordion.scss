@@ -6,7 +6,7 @@
   color: $baseColor;
   background-color: $secondaryColor;
   border: none;
-  border-radius: 4px;
+  border-radius: $border-regular;
 
   &__header {
     display: flex;
