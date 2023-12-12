@@ -1,5 +1,5 @@
 import "./Login.scss";
-import Card from "../Card/Card";
+import Card from "../Card2/Card";
 import Input from "../Input/Input";
 import { toast } from "react-toastify";
 import { useState, useEffect } from "react";
@@ -63,7 +63,7 @@ function Login2() {
 
   return (
     <>
-      <Card customClass="vot__loginForm">
+      {/* <Card customClass="vot__loginForm">
         <form action="" className="vot__loginFormContent" onSubmit={onSubmit}>
           <h3 className="vot__loginFormContent-title">Vortice - Login</h3>
           <div className="vot__loginFormContent-field">
@@ -96,7 +96,7 @@ function Login2() {
             </Button>
           </div>
         </form>
-      </Card>
+      </Card> */}
     </>
   );
 }

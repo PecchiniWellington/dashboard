@@ -1,5 +1,5 @@
 import "./Search.scss";
-import Card from "../Card/Card";
+import Card from "../Card2/Card";
 import { useState } from "react";
 import Button from "../Buttons/Button/Button";
 import { useSelector } from "react-redux";
@@ -21,8 +21,8 @@ const Search = ({ buttonLabel, dispatchEvent, title, children }: ISearch) => {
     setValue("");
   };
 
-  return (
-    <Card customClass="vot__search">
+  return {
+    /* <Card customClass="vot__search">
       {title ? <div className="vot__searchTitle">{title}</div> : <></>}
       <form className="vot__searchForm" onSubmit={onDispatchEvent}>
         {children}
@@ -30,8 +30,8 @@ const Search = ({ buttonLabel, dispatchEvent, title, children }: ISearch) => {
           {buttonLabel || "Cerca"}
         </Button>
       </form>
-    </Card>
-  );
+    </Card> */
+  };
 };
 
 export default Search;

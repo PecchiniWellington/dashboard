@@ -85,6 +85,11 @@ export const sideBarConfig: IMenu[] = [
         icon: "bx bx-grid-alt",
         linkTo: "/components/breadcrumbs",
       },
+      {
+        label: "Carousels",
+        icon: "bx bx-grid-alt",
+        linkTo: "/components/carousels",
+      },
     ],
   },
 ];

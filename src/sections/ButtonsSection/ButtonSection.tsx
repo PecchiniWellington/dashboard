@@ -1,19 +1,15 @@
+import Section from "../Section";
 import ButtonsAsync from "./ButtonAsync/ButtonsAsync";
-import "./ButtonSection.scss";
 import ButtonsBase from "./ButtonsBase/ButtonsBase";
 import ButtonsIcons from "./ButtonsIcons/ButtonsIcons";
 
-interface IButtonSection {
-  customClass?: string;
-}
-
-function ButtonSection({ customClass }: IButtonSection) {
+function ButtonSection() {
   return (
-    <div className={`buttonSection ${customClass}`}>
+    <Section>
       <ButtonsBase />
       <ButtonsAsync />
       <ButtonsIcons />
-    </div>
+    </Section>
   );
 }
 

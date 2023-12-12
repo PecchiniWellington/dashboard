@@ -1,7 +1,7 @@
-import "./AlertsSection.scss";
 import AlertsBase from "./AlertsBase/AlertsBase";
 import AlertsIcon from "./AlertsIcon/AlertsIcon";
 import AlertManualClose from "./AlertsManualClose/AlertManualClose";
+import Section from "../Section";
 
 interface IAlertsSection {
   customClass?: string;
@@ -9,11 +9,11 @@ interface IAlertsSection {
 
 function AlertsSection({ customClass }: IAlertsSection) {
   return (
-    <div className={`alertsSection ${customClass}`}>
+    <Section>
       <AlertsBase />
       <AlertsIcon />
       <AlertManualClose />
-    </div>
+    </Section>
   );
 }
 

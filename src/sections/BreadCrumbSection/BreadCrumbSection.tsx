@@ -1,15 +1,11 @@
+import Section from "../Section";
 import BreadCrumbsBase from "./BreadCrumbBase/BreadCrumbBase";
-import "./BreadCrumbSection.scss";
 
-interface IBreadCrumbSection {
-  customClass?: string;
-}
-
-function BreadCrumbSection({ customClass }: IBreadCrumbSection) {
+function BreadCrumbSection() {
   return (
-    <div className={`breadCrumbSection ${customClass}`}>
+    <Section>
       <BreadCrumbsBase />
-    </div>
+    </Section>
   );
 }
 

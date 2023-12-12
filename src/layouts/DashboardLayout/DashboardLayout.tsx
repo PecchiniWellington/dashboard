@@ -14,6 +14,7 @@ import AccordionSection from "../../sections/AccordionSection/AccordionSection";
 import AlertsSection from "../../sections/AlertsSection/AlertsSection";
 import BadgeSection from "../../sections/BadgeSection/BadgeSection";
 import BreadCrumbSection from "../../sections/BreadCrumbSection/BreadCrumbSection";
+import CarouselSection from "../../sections/CarouselsSection/CarouselsSection";
 
 function DashboardLayout() {
   const { dashboards } = useContext(DashboardContext);
@@ -72,6 +73,10 @@ function DashboardLayout() {
             <Route
               path={`/components/breadcrumbs`}
               element={<BreadCrumbSection customClass="" />}
+            ></Route>
+            <Route
+              path={`/components/carousels`}
+              element={<CarouselSection customClass="" />}
             ></Route>
           </Route>
         </Routes>

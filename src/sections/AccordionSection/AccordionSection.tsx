@@ -1,15 +1,11 @@
+import Section from "../Section";
 import AccordionBase from "./AccordionBase/AccordionBase";
-import "./AccordionSection.scss";
 
-interface IAccordionSection {
-  customClass?: string;
-}
-
-function AccordionSection({ customClass }: IAccordionSection) {
+function AccordionSection() {
   return (
-    <div className={`accordionSection ${customClass}`}>
+    <Section>
       <AccordionBase></AccordionBase>
-    </div>
+    </Section>
   );
 }
 

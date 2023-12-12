@@ -3,7 +3,7 @@ import "./Badge.scss";
 
 interface IBadge {
   customClass?: string;
-  children?: any;
+  children: string | JSX.Element | JSX.Element[];
   typeBadge?: string;
   contentBadge?: string | number;
 }

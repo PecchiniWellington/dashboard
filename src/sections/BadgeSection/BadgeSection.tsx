@@ -1,15 +1,11 @@
+import Section from "../Section";
 import BadgeBase from "./BadgeBase/BadgeBase";
-import "./BadgeSection.scss";
 
-interface IBadgeSection {
-  customClass?: string;
-}
-
-function BadgeSection({ customClass }: IBadgeSection) {
+function BadgeSection() {
   return (
-    <div className={`badgeSection ${customClass}`}>
+    <Section>
       <BadgeBase />
-    </div>
+    </Section>
   );
 }
 
