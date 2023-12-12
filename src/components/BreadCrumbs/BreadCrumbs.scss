@@ -1,38 +1,33 @@
-@import "../../scss/main.scss";
+@import "/src/style/main.scss";
 
-.vot {
-  &__breadCrumbs {
-    border-top: 1px solid black;
-    padding-top: 20px;
-    margin-top: 5px;
+.breadCrumbs {
+  border-top: 1px solid black;
+  padding-top: 20px;
+  margin-top: 5px;
+  display: flex;
+  & > * {
+    display: inline-block;
+    margin-right: 10px;
+  }
 
-    & > * {
-      display: inline-block;
-      margin-right: 10px;
+  .crumb {
+    display: flex;
+    flex-direction: row;
+    &:last-child:after {
+      display: none;
     }
-
-    .crumb {
-      &:after {
-        color: $uiColor2;
-        content: "/";
-        margin-left: 10px;
-      }
-      &:last-child:after {
-        display: none;
-      }
-      &:last-child {
-        a {
-          color: $uiColor1 !important;
-        }
-      }
+    &:last-child {
       a {
-        text-decoration: none;
-        font-weight: 100;
-        color: $uiColor4;
+        color: $uiColor1 !important;
+      }
+    }
+    a {
+      text-decoration: none;
+      font-weight: 100;
+      color: $uiColor3;
 
-        &:hover {
-          color: $uiColor3;
-        }
+      &:hover {
+        color: $uiColor3;
       }
     }
   }

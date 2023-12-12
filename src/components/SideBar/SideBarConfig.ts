@@ -71,9 +71,19 @@ export const sideBarConfig: IMenu[] = [
         linkTo: "/components/accordions",
       },
       {
+        label: "Badges",
+        icon: "bx bx-grid-alt",
+        linkTo: "/components/badges",
+      },
+      {
         label: "Alerts",
         icon: "bx bx-grid-alt",
         linkTo: "/components/alerts",
+      },
+      {
+        label: "BreadCrumbs",
+        icon: "bx bx-grid-alt",
+        linkTo: "/components/breadcrumbs",
       },
     ],
   },

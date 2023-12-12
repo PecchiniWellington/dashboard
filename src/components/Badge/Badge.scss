@@ -1,0 +1,272 @@
+@import "/src/style/main.scss";
+
+.badge {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  color: #333333;
+  background: #dddddd;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+
+  &:hover {
+    cursor: pointer;
+
+    .badge__badge {
+      animation: shake 0.6s infinite;
+    }
+  }
+
+  &:active {
+    background: #cccccc;
+  }
+
+  &__badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: red;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 0.625rem;
+    padding: 5px;
+  }
+  .string {
+    border-radius: $border-regular !important;
+    right: -40px;
+  }
+
+  .empty {
+    right: 0px;
+    top: -5px;
+  }
+
+  .primary {
+    background-color: $primaryColor;
+    color: $baseColor;
+
+    &:hover {
+      background-color: darken($color: $primaryColor, $amount: 9);
+      color: $baseColor;
+    }
+
+    &active {
+      background-color: darken($color: $primaryColor, $amount: 9);
+      color: $baseColor;
+    }
+    &disabled {
+      cursor: not-allowed;
+      background-color: lighten($color: $primaryColor, $amount: 9);
+      color: $baseColor;
+    }
+  }
+
+  .secondary {
+    background-color: $secondaryColor;
+    color: $baseColor;
+
+    &:hover {
+      background-color: darken($color: $secondaryColor, $amount: 9);
+      color: $baseColor;
+    }
+
+    &active {
+      background-color: darken($color: $secondaryColor, $amount: 9);
+      color: $baseColor;
+    }
+    &disabled {
+      cursor: not-allowed;
+      background-color: lighten($color: $secondaryColor, $amount: 9);
+      color: $baseColor;
+    }
+  }
+
+  .success {
+    background-color: $successColor;
+    color: $baseColor;
+
+    &:hover {
+      background-color: darken($color: $successColor, $amount: 9);
+      color: $baseColor;
+    }
+
+    &active {
+      background-color: darken($color: $successColor, $amount: 9);
+      color: $baseColor;
+    }
+    &disabled {
+      cursor: not-allowed;
+      background-color: lighten($color: $successColor, $amount: 9);
+      color: $baseColor;
+    }
+  }
+  .warning {
+    background-color: $warningColor;
+    color: $baseColor;
+    &:hover {
+      background-color: darken($color: $warningColor, $amount: 9);
+      color: $baseColor;
+    }
+
+    &active {
+      background-color: darken($color: $warningColor, $amount: 9);
+      color: $baseColor;
+    }
+    &disabled {
+      cursor: not-allowed;
+      background-color: lighten($color: $warningColor, $amount: 9);
+      color: $baseColor;
+    }
+  }
+  .error {
+    background-color: $errorColor;
+    color: $baseColor;
+
+    &:hover {
+      background-color: darken($color: $errorColor, $amount: 9);
+      color: $baseColor;
+    }
+
+    &active {
+      background-color: darken($color: $errorColor, $amount: 9);
+      color: $baseColor;
+    }
+    &disabled {
+      cursor: not-allowed;
+      background-color: lighten($color: $errorColor, $amount: 9);
+      color: $baseColor;
+    }
+  }
+  .info {
+    background-color: $infoColor;
+    color: $baseColor;
+
+    &:hover {
+      background-color: darken($color: $infoColor, $amount: 9);
+      color: $baseColor;
+    }
+
+    &active {
+      background-color: darken($color: $infoColor, $amount: 9);
+      color: $baseColor;
+    }
+    &disabled {
+      cursor: not-allowed;
+      background-color: lighten($color: $infoColor, $amount: 9);
+      color: $baseColor;
+    }
+  }
+
+  .light {
+    background-color: $lightColor;
+    color: $textColorBlack;
+
+    &:hover {
+      background-color: darken($color: $lightColor, $amount: 9);
+      color: $textColorBlack;
+    }
+
+    &active {
+      background-color: darken($color: $lightColor, $amount: 9);
+      color: $textColorBlack;
+    }
+    &disabled {
+      cursor: not-allowed;
+      background-color: lighten($color: $lightColor, $amount: 9);
+      color: $textColorBlack;
+    }
+  }
+
+  .dark {
+    background-color: $darkColor;
+    color: $lightColor;
+
+    &:hover {
+      background-color: darken($color: $darkColor, $amount: 9);
+      color: $lightColor;
+    }
+
+    &active {
+      background-color: darken($color: $darkColor, $amount: 9);
+      color: $lightColor;
+    }
+    &disabled {
+      cursor: not-allowed;
+      background-color: lighten($color: $darkColor, $amount: 9);
+      color: $lightColor;
+    }
+  }
+
+  /* OUTLINE */
+  .primaryOutline {
+    outline: 2px solid $primaryColor;
+    background-color: transparent;
+    color: $primaryColor;
+  }
+
+  .secondaryOutline {
+    outline: 2px solid $secondaryColor;
+    background-color: transparent;
+    color: $secondaryColor;
+  }
+
+  .successOutline {
+    outline: 2px solid $successColor;
+    background-color: transparent;
+    color: $successColor;
+  }
+  .warningOutline {
+    outline: 2px solid $warningColor;
+    background-color: transparent;
+    color: $warningColor;
+  }
+  .errorOutline {
+    outline: 2px solid $errorColor;
+    background-color: transparent;
+    color: $errorColor;
+  }
+  .infoOutline {
+    outline: 2px solid $infoColor;
+    background-color: transparent;
+    color: $infoColor;
+  }
+
+  .lightOutline {
+    outline: 2px solid $lightColor;
+    background-color: transparent;
+    color: $lightColor;
+    background-color: transparent;
+  }
+
+  .darkOutline {
+    outline: 2px solid $darkColor;
+    background-color: transparent;
+    color: $darkColor;
+  }
+}
+
+/* ANIMATION */
+@keyframes shake {
+  0% {
+    transform: scale(1.1);
+  }
+  25% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}

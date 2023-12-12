@@ -12,6 +12,8 @@ import ButtonsAsync from "../../sections/ButtonsSection/ButtonAsync/ButtonsAsync
 import ButtonsIcons from "../../sections/ButtonsSection/ButtonsIcons/ButtonsIcons";
 import AccordionSection from "../../sections/AccordionSection/AccordionSection";
 import AlertsSection from "../../sections/AlertsSection/AlertsSection";
+import BadgeSection from "../../sections/BadgeSection/BadgeSection";
+import BreadCrumbSection from "../../sections/BreadCrumbSection/BreadCrumbSection";
 
 function DashboardLayout() {
   const { dashboards } = useContext(DashboardContext);
@@ -62,6 +64,14 @@ function DashboardLayout() {
             <Route
               path={`/components/alerts`}
               element={<AlertsSection customClass="" />}
+            ></Route>
+            <Route
+              path={`/components/badges`}
+              element={<BadgeSection customClass="" />}
+            ></Route>
+            <Route
+              path={`/components/breadcrumbs`}
+              element={<BreadCrumbSection customClass="" />}
             ></Route>
           </Route>
         </Routes>
