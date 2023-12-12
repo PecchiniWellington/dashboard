@@ -70,6 +70,11 @@ export const sideBarConfig: IMenu[] = [
         icon: "bx bx-grid-alt",
         linkTo: "/components/accordions",
       },
+      {
+        label: "Alerts",
+        icon: "bx bx-grid-alt",
+        linkTo: "/components/alerts",
+      },
     ],
   },
 ];

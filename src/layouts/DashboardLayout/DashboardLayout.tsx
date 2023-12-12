@@ -11,6 +11,7 @@ import ButtonsBase from "../../sections/ButtonsSection/ButtonsBase/ButtonsBase";
 import ButtonsAsync from "../../sections/ButtonsSection/ButtonAsync/ButtonsAsync";
 import ButtonsIcons from "../../sections/ButtonsSection/ButtonsIcons/ButtonsIcons";
 import AccordionSection from "../../sections/AccordionSection/AccordionSection";
+import AlertsSection from "../../sections/AlertsSection/AlertsSection";
 
 function DashboardLayout() {
   const { dashboards } = useContext(DashboardContext);
@@ -57,6 +58,10 @@ function DashboardLayout() {
             <Route
               path={`/components/accordions`}
               element={<AccordionSection customClass="" />}
+            ></Route>
+            <Route
+              path={`/components/alerts`}
+              element={<AlertsSection customClass="" />}
             ></Route>
           </Route>
         </Routes>

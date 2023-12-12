@@ -1,0 +1,68 @@
+@import "/src/style/main.scss";
+
+.alert {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  padding: 20px;
+  border: 5px;
+  border-radius: $border-small;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  height: 100%;
+  overflow: hidden;
+  .content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .iconClose {
+    opacity: 1;
+  }
+}
+
+.close {
+  transition: all 0.5s ease;
+  height: 0px;
+  overflow: hidden;
+  border: none !important;
+
+  .content {
+    opacity: 0;
+  }
+  .iconClose {
+    opacity: 0;
+  }
+}
+.info {
+  background-color: $infoColor;
+  border: 2px solid lighten($color: $infoColor, $amount: 8);
+  color: lighten($color: $infoColor, $amount: 40);
+}
+.light {
+  background-color: $lightColor;
+  border: 2px solid lighten($color: $lightColor, $amount: 8);
+  color: lighten($color: $lightColor, $amount: 40);
+}
+.dark {
+  background-color: $darkColor;
+  border: 2px solid lighten($color: $darkColor, $amount: 8);
+  color: lighten($color: $darkColor, $amount: 40);
+}
+.success {
+  background-color: $successColor;
+  border: 2px solid lighten($color: $successColor, $amount: 8);
+  color: lighten($color: $successColor, $amount: 40);
+}
+.warning {
+  background-color: $warningColor;
+  border: 2px solid lighten($color: $warningColor, $amount: 8);
+  color: lighten($color: $warningColor, $amount: 40);
+}
+.error {
+  background-color: $errorColor;
+  border: 2px solid lighten($color: $errorColor, $amount: 8);
+  color: lighten($color: $errorColor, $amount: 40);
+}

@@ -5,6 +5,7 @@ interface ISectionContainerRow {
   children: string | JSX.Element | JSX.Element[];
   title: string;
   direction?: string;
+  space?: number;
 }
 
 function SectionContainerRow({
@@ -12,13 +13,14 @@ function SectionContainerRow({
   children,
   title,
   direction = "row",
+  space = 0,
 }: ISectionContainerRow) {
   return (
     <div className={`sectionContainerRow ${customClass}`}>
       <div className="sectionContainerRow__title">{title}</div>
       <div
         className="sectionContainerRow__body"
-        style={{ flexDirection: direction }}
+        style={{ flexDirection: direction, gap: `${space}px` }}
       >
         {children}
       </div>

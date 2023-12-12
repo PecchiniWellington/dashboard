@@ -9,7 +9,7 @@ interface IButton {
   projectType?: string;
   customClass?: string;
   customStyle?: CSSProperties | undefined;
-  type: "button" | "submit" | "reset" | undefined;
+  type?: "button" | "submit" | "reset" | undefined;
   disabled?: boolean;
   active?: boolean;
   asyncButton?: boolean;
@@ -23,7 +23,7 @@ function Button({
   customClass,
   projectType,
   customStyle,
-  type,
+  type = "button",
   disabled = false,
   active = false,
   asyncButton = false,
