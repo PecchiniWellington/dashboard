@@ -4,9 +4,19 @@
   border: 1px solid;
   width: 100%;
   color: $baseColor;
-  background-color: $secondaryColor;
+  background-color: $baseColor;
   border: none;
-  border-radius: $border-regular;
+  color: $textColorBlack;
+  transition: all 0.5s ease;
+  border-bottom: 1px solid $lightColor;
+
+  &:first-child {
+    border-radius: $border-regular $border-regular 0px 0px;
+  }
+  &:last-child {
+    border-bottom: none;
+    border-radius: 0px 0px $border-regular $border-regular;
+  }
 
   &__header {
     display: flex;
@@ -14,28 +24,30 @@
     justify-content: space-between;
     padding: 10px;
     font-size: 1rem;
+    transition: all 0.5s ease;
 
     &Arrow {
-      font-size: $medium-font;
+      font-size: $small-font;
       font-weight: 800;
       margin-left: 20px;
     }
   }
   .open {
-    display: block;
-    padding: 20px 20px;
+    padding: 10px 10px;
     font-size: $small-font;
-    transition: all 0.35s;
+    transition: all 0.5s ease;
+    height: auto;
+    overflow: hidden;
+    border-top: 1px solid $lightColor;
   }
 
   &__content {
-    > p {
-      text-align: left;
-      text-align: justify;
-    }
+    text-align: justify;
+    width: 100%;
   }
   .closed {
-    display: none;
-    transition: all 0.35s;
+    height: 0px;
+    transition: all 0.5s ease;
+    overflow: hidden;
   }
 }

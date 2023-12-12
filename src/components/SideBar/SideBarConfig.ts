@@ -68,7 +68,7 @@ export const sideBarConfig: IMenu[] = [
       {
         label: "Collapse",
         icon: "bx bx-grid-alt",
-        linkTo: "/components/collapses",
+        linkTo: "/components/accordions",
       },
     ],
   },

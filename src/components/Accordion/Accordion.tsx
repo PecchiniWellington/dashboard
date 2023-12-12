@@ -40,8 +40,8 @@ const Accordion: React.FC<AccordionProps> = ({
           />
         )}
       </div>
-      <div className={`${isOpen ? "open" : "closed"}`}>
-        <div className="accordion__content">{children}</div>
+      <div className={`${isOpen ? "open" : "closed"} accordion__content`}>
+        {children}
       </div>
     </div>
   );

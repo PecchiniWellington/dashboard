@@ -1,17 +1,14 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import "./SideBar.scss";
 import { IMenu, sideBarConfig } from "./SideBarConfig";
 import SideBarLink from "./SideBarLink/SideBarLink";
 import profile from "../../assets/images/profile.jpeg";
-import { NavLink } from "react-router-dom";
 import SideBarCollapse from "./SideBarCollapse/SideBarCollapse";
-import { DashboardContext } from "../../context/dashboardContext";
 
 interface ISideBar {}
 
 function SideBar({}: ISideBar) {
   const [open, setOpen] = useState(false);
-  const [openCollapse, setOpenCollapse] = useState(false);
 
   const toggleButton = () => {
     setOpen(!open);
