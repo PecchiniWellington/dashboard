@@ -1,5 +1,4 @@
 import Button from "../../../components/Buttons/Button/Button";
-import SectionContainer from "../../../components/SectionContainer/SectionContainer";
 import SectionContainerRow from "../../../components/SectionContainer/SectionContainerRow/SectionContainerRow";
 
 interface IButtonsAsync {
@@ -8,7 +7,7 @@ interface IButtonsAsync {
 
 function ButtonsAsync({ customClass }: IButtonsAsync) {
   return (
-    <SectionContainer title="Button async" description="Bottoni asyncroni">
+    <>
       <SectionContainerRow title="normal">
         <Button type="button" asyncButton={true} projectType="primary">
           Primary
@@ -194,7 +193,7 @@ function ButtonsAsync({ customClass }: IButtonsAsync) {
           Dark
         </Button>
       </SectionContainerRow>
-    </SectionContainer>
+    </>
   );
 }
 

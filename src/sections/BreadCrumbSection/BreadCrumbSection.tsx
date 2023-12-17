@@ -1,11 +1,14 @@
-import Section from "../Section";
+import SectionContainer from "../../components/SectionContainer/SectionContainer";
 import BreadCrumbsBase from "./BreadCrumbBase/BreadCrumbBase";
 
 function BreadCrumbSection() {
   return (
-    <Section>
+    <SectionContainer
+      title="Button filled"
+      description="Bottoni based riempiti"
+    >
       <BreadCrumbsBase />
-    </Section>
+    </SectionContainer>
   );
 }
 

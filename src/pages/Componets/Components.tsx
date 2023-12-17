@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import "./Components.scss";
+import Section from "../../sections/Section";
 
 interface IComponents {
   customClass?: string;
@@ -8,7 +9,9 @@ interface IComponents {
 function Components({ customClass }: IComponents) {
   return (
     <div className={`components ${customClass}`}>
-      <Outlet />
+      <Section>
+        <Outlet />
+      </Section>
     </div>
   );
 }

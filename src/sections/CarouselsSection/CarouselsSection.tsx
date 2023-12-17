@@ -1,13 +1,14 @@
-import Section from "../Section";
-import CarouselG from "./CarouselGallery/CarouselG";
+import SectionContainer from "../../components/SectionContainer/SectionContainer";
+import SliderBase1 from "./SliderBase1/SliderBase1";
 
 function CarouselSection() {
   return (
-    <Section>
-      <CarouselG>
-        <div>CIAO</div>
-      </CarouselG>
-    </Section>
+    <SectionContainer
+      title="Button filled"
+      description="Bottoni based riempiti"
+    >
+      <SliderBase1></SliderBase1>
+    </SectionContainer>
   );
 }
 

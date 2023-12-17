@@ -5,16 +5,38 @@
   width: 100%;
   align-items: center;
   margin: 20px 0px;
+  flex-direction: column;
 
   &__title {
-    margin-right: 50px;
-    width: 100px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+    width: 100%;
     display: flex;
+    border-bottom: 2px solid $primaryColor;
+    font-weight: bold !important;
   }
 
   &__body {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     width: 100%;
+    flex-direction: column;
+    height: 100%;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: $desktop-medium-layout) {
+  .sectionContainerRow {
+    flex-direction: row;
+
+    &__title {
+      margin-right: 50px;
+      max-width: 150px;
+    }
+    &__body {
+      flex-direction: row;
+    }
   }
 }

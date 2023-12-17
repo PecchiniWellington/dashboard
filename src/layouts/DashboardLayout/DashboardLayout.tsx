@@ -9,7 +9,7 @@ import { DashboardContext } from "../../context/dashboardContext";
 import ButtonSection from "../../sections/ButtonsSection/ButtonSection";
 import ButtonsBase from "../../sections/ButtonsSection/ButtonsBase/ButtonsBase";
 import ButtonsAsync from "../../sections/ButtonsSection/ButtonAsync/ButtonsAsync";
-import ButtonsIcons from "../../sections/ButtonsSection/ButtonsIcons/ButtonsIcons";
+import ButtonsIcons from "../../sections/ButtonsSection/ButtonsIconsPre/ButtonsIconsPre";
 import AccordionSection from "../../sections/AccordionSection/AccordionSection";
 import AlertsSection from "../../sections/AlertsSection/AlertsSection";
 import BadgeSection from "../../sections/BadgeSection/BadgeSection";

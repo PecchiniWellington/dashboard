@@ -1,15 +1,37 @@
-import Section from "../Section";
+import SectionContainer from "../../components/SectionContainer/SectionContainer";
 import ButtonsAsync from "./ButtonAsync/ButtonsAsync";
 import ButtonsBase from "./ButtonsBase/ButtonsBase";
-import ButtonsIcons from "./ButtonsIcons/ButtonsIcons";
+import ButtonsIconsPost from "./ButtonsIconsPost/ButtonsIconsPost";
+import ButtonsIconsPre from "./ButtonsIconsPre/ButtonsIconsPre";
 
 function ButtonSection() {
   return (
-    <Section>
-      <ButtonsBase />
-      <ButtonsAsync />
-      <ButtonsIcons />
-    </Section>
+    <>
+      <SectionContainer
+        title="Button filled"
+        description="Bottoni based riempiti"
+      >
+        <ButtonsBase />
+      </SectionContainer>
+      <SectionContainer
+        title="Button filled"
+        description="Bottoni based riempiti"
+      >
+        <ButtonsAsync />
+      </SectionContainer>
+      <SectionContainer
+        title="Button filled"
+        description="Bottoni based riempiti"
+      >
+        <ButtonsIconsPre />
+      </SectionContainer>
+      <SectionContainer
+        title="Button filled"
+        description="Bottoni based riempiti"
+      >
+        <ButtonsIconsPost />
+      </SectionContainer>
+    </>
   );
 }
 

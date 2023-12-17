@@ -1,17 +1,9 @@
 import Button from "../../../components/Buttons/Button/Button";
-import SectionContainer from "../../../components/SectionContainer/SectionContainer";
 import SectionContainerRow from "../../../components/SectionContainer/SectionContainerRow/SectionContainerRow";
 
-interface IButtonsBase {
-  customClass?: string;
-}
-
-function ButtonsBase({ customClass }: IButtonsBase) {
+function ButtonsBase() {
   return (
-    <SectionContainer
-      title="Button filled"
-      description="Bottoni based riempiti"
-    >
+    <>
       <SectionContainerRow title="normal">
         <Button type="button" projectType="primary">
           Primary
@@ -117,7 +109,7 @@ function ButtonsBase({ customClass }: IButtonsBase) {
           Dark
         </Button>
       </SectionContainerRow>
-    </SectionContainer>
+    </>
   );
 }
 

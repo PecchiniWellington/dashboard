@@ -1,11 +1,14 @@
-import Section from "../Section";
+import SectionContainer from "../../components/SectionContainer/SectionContainer";
 import AccordionBase from "./AccordionBase/AccordionBase";
 
 function AccordionSection() {
   return (
-    <Section>
+    <SectionContainer
+      title="Button filled"
+      description="Bottoni based riempiti"
+    >
       <AccordionBase></AccordionBase>
-    </Section>
+    </SectionContainer>
   );
 }
 

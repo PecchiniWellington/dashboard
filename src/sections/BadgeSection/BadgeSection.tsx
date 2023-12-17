@@ -1,11 +1,14 @@
-import Section from "../Section";
 import BadgeBase from "./BadgeBase/BadgeBase";
+import SectionContainer from "../../components/SectionContainer/SectionContainer";
 
 function BadgeSection() {
   return (
-    <Section>
+    <SectionContainer
+      title="Button filled"
+      description="Bottoni based riempiti"
+    >
       <BadgeBase />
-    </Section>
+    </SectionContainer>
   );
 }
 

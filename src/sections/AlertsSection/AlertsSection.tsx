@@ -1,7 +1,7 @@
 import AlertsBase from "./AlertsBase/AlertsBase";
 import AlertsIcon from "./AlertsIcon/AlertsIcon";
 import AlertManualClose from "./AlertsManualClose/AlertManualClose";
-import Section from "../Section";
+import SectionContainer from "../../components/SectionContainer/SectionContainer";
 
 interface IAlertsSection {
   customClass?: string;
@@ -9,11 +9,29 @@ interface IAlertsSection {
 
 function AlertsSection({ customClass }: IAlertsSection) {
   return (
-    <Section>
-      <AlertsBase />
-      <AlertsIcon />
-      <AlertManualClose />
-    </Section>
+    <>
+      <SectionContainer
+        customClass={`alertsBase ${customClass}`}
+        title="Button filled"
+        description="Bottoni based riempiti"
+      >
+        <AlertsBase />
+      </SectionContainer>
+      <SectionContainer
+        customClass={`alertsBase ${customClass}`}
+        title="Button filled"
+        description="Bottoni based riempiti"
+      >
+        <AlertsIcon />
+      </SectionContainer>
+      <SectionContainer
+        customClass={`alertsBase ${customClass}`}
+        title="Button filled"
+        description="Bottoni based riempiti"
+      >
+        <AlertManualClose />
+      </SectionContainer>
+    </>
   );
 }
 

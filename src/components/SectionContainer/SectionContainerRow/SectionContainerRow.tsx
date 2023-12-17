@@ -18,12 +18,7 @@ function SectionContainerRow({
   return (
     <div className={`sectionContainerRow ${customClass}`}>
       <div className="sectionContainerRow__title">{title}</div>
-      <div
-        className="sectionContainerRow__body"
-        style={{ flexDirection: direction, gap: `${space}px` }}
-      >
-        {children}
-      </div>
+      <div className="sectionContainerRow__body">{children}</div>
     </div>
   );
 }
